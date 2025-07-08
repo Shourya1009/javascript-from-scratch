@@ -55,18 +55,18 @@ console.log(ud);
 They are fundamentals as everything in js are objects .
 */
 
-let gfg = {
+let xyz = {
   type: "company",
   location: "Noida",
 };
-console.log(gfg.type);
+console.log(xyz.type);
 
 let user1 = {
-  name: "Shourya",
+  name: "abc",
   age: 23,
   education: {
-    graduation: "BCA",
-    post_graduation: "MCA",
+    graduation: "Btech",
+    post_graduation: "Mtech",
   },
   location: "Dehradun",
 };
@@ -76,3 +76,7 @@ console.log(
   user1.education.post_graduation,
   user1.location
 );
+
+// NULL Data Type -> It actually represents empty value.
+var company = null;
+console.log(company);
