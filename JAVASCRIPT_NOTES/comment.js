@@ -1,7 +1,7 @@
 /* 
 Comment is a line of text in a program that is ignored by a compiler or an interpreter.
 
-Comment are used to explan what your code does , makes it more readable and temporarily diable code during comments.
+Comment are used to explan what your code does , makes it more readable and temporarily diable it during program execution.
 
 */
 

@@ -10,4 +10,6 @@
 
 # Non-Primitive Data Type :- Non-primitive data types, also known as reference types, are objects and derived data types. They can store collections of values or more complex entities. The two key non-primitive data types in JavaScript are: 1. Object , 2. Array
 
+# Comment is a line of text in a program that is ignored by a compiler or an interpreter. Comment are used to explan what your code does , makes it more readable and temporarily diable it during program execution.
+
 # In JavaScript, null is a primitive value representing the intentional absence of any object value. It signifies "nothing," "empty," or "value unknown" and is often used by developers to explicitly indicate that a variable currently holds no meaningful value, or that an object is expected but not yet present.
