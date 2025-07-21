@@ -5,3 +5,7 @@ console.log("Shourya");
 
 let age = 23;
 console.log(age);
+
+// create a variable named user
+const user = "Shourya";
+console.log(user);
