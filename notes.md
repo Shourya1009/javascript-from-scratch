@@ -13,3 +13,7 @@
 # Comment is a line of text in a program that is ignored by a compiler or an interpreter. Comment are used to explan what your code does , makes it more readable and temporarily diable it during program execution.
 
 # In JavaScript, null is a primitive value representing the intentional absence of any object value. It signifies "nothing," "empty," or "value unknown" and is often used by developers to explicitly indicate that a variable currently holds no meaningful value, or that an object is expected but not yet present.
+
+# Escape Characters(Backslash) are the symbol used to begin an escape command in order to execute some operation.Escape characters are characters that are used when working with special characters like single quotes, and double quotes, To print these characters as it is, including the backslash ‘\’ in front of them.
+
+# The typeof operator in JavaScript is a unary operator used to determine the data type of its operand. It returns a string indicating the type of the unevaluated operand.
