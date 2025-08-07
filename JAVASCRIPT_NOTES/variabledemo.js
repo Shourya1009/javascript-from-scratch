@@ -34,3 +34,18 @@ The following are the rules for naming variables in JavaScript:
 
 var text = "Learning about Variables";
 console.log(text);
+
+const employee_name = "Shourya";
+console.log(employee_name);
+
+let age = 23;
+console.log(age);
+
+var education = "MCA";
+console.log(education);
+
+let job = "web-developer";
+console.log(job);
+
+const employee_id = 102;
+console.log(employee_id);
