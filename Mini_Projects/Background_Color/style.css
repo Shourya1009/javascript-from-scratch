@@ -1,0 +1,15 @@
+#container {
+  text-align: center;
+}
+#color-btn {
+  background-color: blue;
+  color: #fff;
+  border-radius: 10px;
+}
+
+#color-code {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: yellow;
+  margin-top: 20px;
+}

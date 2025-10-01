@@ -1,0 +1,17 @@
+body {
+  height: 100vh;
+}
+body.light-mode {
+  background: linear-gradient(#e66465, #9198e5);
+  color: #000;
+}
+body.dark-mode {
+  background: linear-gradient(#662d2d, #2d2f66);
+  color: #fff;
+}
+#toggle-btn {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
