@@ -1,52 +1,51 @@
+// Full Name using Template Literals
 let firstName = "Shourya";
 let lastName = "Joshi";
 
-let fullName = firstName + " " + lastName;
+let fullName = `${firstName} ${lastName}`;
+console.log("Full Name:", fullName);
 
-console.log(fullName);
+console.log("---------------------------------------------------------");
 
 // Indexing in String
-
 let str = "Hello";
 
-// Accessing last character -> first find out length of string using .length property then use strng index to find last character.
+console.log("Length of str is:", str.length);
+console.log("Last character of str:", str[str.length - 1]);
 
-console.log("Length of str is :", str.length);
-console.log("Last character : ", str[str.length - 1]);
-
-console.log(str[0]); // "H"  (first character)
-console.log(str[1]); // "e"
-console.log(str[2]); // "l"
-console.log(str[3]); // "l"
-console.log(str[4]); // "o"
+// Accessing each character using index
+console.log("Characters of str:");
+for (let i = 0; i < str.length; i++) {
+  console.log(`Index ${i}:`, str[i]);
+}
 
 console.log("---------------------------------------------------------");
 
+// Another example with 'Shourya'
 let name = "Shourya";
 
-console.log(name[0]);
-console.log(name[1]);
-console.log(name[2]);
-console.log(name[3]);
-console.log(name[4]);
-console.log(name[5]);
-console.log(name[6]);
+console.log("Characters of 'Shourya':");
+for (let i = 0; i < name.length; i++) {
+  console.log(`Index ${i}:`, name[i]);
+}
 
 console.log("---------------------------------------------------------");
 
-// Length of String :-
+// Length of String
+console.log("Length of 'Shourya':", name.length);
 
-/*  
-Length of a String
+// Last character using length - 1
+console.log("Last character:", name[name.length - 1]);
 
-We can use .length to know how many characters are inside:
-*/
-console.log(name.length);
+console.log("---------------------------------------------------------");
 
-// To access last character :- last character will always be at index length - 1.
-console.log(name[name.length - 1]);
+// Strings are Immutable
+console.log("Original name:", name);
+name[0] = "A"; // ❌ This will not change the string
+console.log("After trying to modify name[0] = 'A':", name);
 
-// Strings are immutable in js - That means once a string is created, its individual characters cannot be changed.
-// So name[0] = "A"; doesn’t throw an error ❌, but it also does nothing.
-name[0] = "A";
-console.log(name);
+// Correct way to change a string → create a new one
+let newName = "A" + name.slice(1);
+console.log("New modified name:", newName);
+
+console.log("---------------------------------------------------------");
