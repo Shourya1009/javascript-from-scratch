@@ -1,0 +1,44 @@
+/* General page styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.4s ease;
+}
+
+/* Container */
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Button */
+button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Color code text */
+.colorText {
+  margin-top: 1rem;
+  font-weight: 500;
+}
