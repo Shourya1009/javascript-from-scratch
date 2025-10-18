@@ -2,7 +2,7 @@
 The typeof operator returns the data type of a given value or variable as a string.
 
 ⚡ Notes:
-- Arrays, objects, and null all return "object".
+- Arrays, objects, and null(exception case) all return "object".
 - To check arrays → use Array.isArray()
 - To check null → strict equality check (value === null)
 - Functions are callable objects but typeof distinguishes them as "function".
