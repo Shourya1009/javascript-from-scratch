@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+.password-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.password-box input {
+  width: 75%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.password-box button {
+  background: #5a67d8;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.password-box button:hover {
+  background: #4c51bf;
+}
+
+.settings {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.settings label {
+  display: block;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+input[type="number"] {
+  width: 80px;
+  padding: 5px;
+  border-radius: 6px;
+  border: none;
+  margin-top: 5px;
+}
+
+#generate {
+  background: #48bb78;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#generate:hover {
+  background: #38a169;
+}
