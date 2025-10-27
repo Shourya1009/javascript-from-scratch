@@ -1,64 +1,112 @@
+/* 🎵 Modern Music Player Styling */
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #141e30, #243b55);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   height: 100vh;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
+  overflow: hidden;
 }
 
+/* Glassmorphism Container */
 .music-container {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 30px;
-  width: 350px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  padding: 35px 30px;
+  width: 340px;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.music-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+}
+
+/* Title */
 .title {
-  margin-bottom: 20px;
-  font-size: 24px;
+  margin-bottom: 15px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #f5f5f5;
 }
 
+/* Song Info */
 .music-info {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #ddd;
 }
 
+/* Controls */
 .controls {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
+/* Buttons */
 .btn {
   background: none;
   border: none;
-  font-size: 30px;
-  color: #fff;
+  font-size: 32px;
+  color: #ffffff;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
 .btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.25);
+  color: #1db954;
 }
 
+.btn:active {
+  transform: scale(1.15);
+}
+
+/* Progress Bar */
 .progress-container {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
   cursor: pointer;
   height: 8px;
   width: 100%;
+  overflow: hidden;
+  margin-top: 10px;
 }
 
 .progress {
-  background: #1db954;
+  background: linear-gradient(90deg, #1db954, #4ade80);
   height: 100%;
   width: 0%;
-  border-radius: 5px;
-  transition: width 0.1s linear;
+  border-radius: inherit;
+  transition: width 0.2s linear;
+}
+
+/* Subtle glow for playing state */
+.playing .progress {
+  box-shadow: 0 0 10px #1db954;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 400px) {
+  .music-container {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .btn {
+    font-size: 26px;
+  }
 }
