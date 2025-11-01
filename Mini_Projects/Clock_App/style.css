@@ -1,3 +1,30 @@
 #container {
+  display: flex;
+  flex-direction: column; /* Ensures clock and any text stack nicely */
+  justify-content: center; /* Vertically center */
+  align-items: center; /* Horizontally center */
   text-align: center;
+  height: 100vh; /* Fill the full screen height */
+  background: linear-gradient(
+    135deg,
+    #1e3c72,
+    #2a5298
+  ); /* Subtle gradient background */
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.5s ease;
+}
+
+/* Optional: make it glow slightly */
+#container:hover {
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.1);
+}
+
+/* If your clock text has an id like #clock */
+#clock {
+  font-size: 6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
