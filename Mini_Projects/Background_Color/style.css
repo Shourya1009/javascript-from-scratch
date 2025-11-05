@@ -1,15 +1,48 @@
+/* Center everything neatly */
 #container {
   text-align: center;
-}
-#color-btn {
-  background-color: blue;
-  color: #fff;
-  border-radius: 10px;
+  padding: 40px;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease;
 }
 
+/* Stylish button with hover animation */
+#color-btn {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.4s ease;
+}
+
+#color-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(90deg, #00c6ff, #007bff);
+}
+
+/* Enhanced color code display */
 #color-code {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 800;
-  color: yellow;
-  margin-top: 20px;
+  color: #ffeb3b;
+  margin-top: 25px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 235, 59, 0.7);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#color-code:hover {
+  color: #fff176;
+  text-shadow: 0 0 15px rgba(255, 241, 118, 0.9);
 }
