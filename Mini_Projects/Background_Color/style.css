@@ -1,98 +1,53 @@
-/* 🌌 Container with glassy, elegant design */
+/* Remove body margin that causes scrolling */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Fullscreen container without overflow */
 #container {
-  text-align: center;
-  padding: 50px;
-  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-  min-height: 100vh;
+  background: #0f3460;
+  height: 100vh; /* use height instead of min-height */
+  width: 100vw;
+  box-sizing: border-box; /* ensures padding doesn't increase size */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(10px);
-  transition: background 0.8s ease;
-  position: relative;
-  overflow: hidden;
+  padding: 50px;
+  text-align: center;
+  transition: background 0.4s ease;
+  overflow: hidden; /* prevents minor scroll from small rounding */
 }
 
-/* ✨ Soft animated glow in background */
-#container::before {
-  content: "";
-  position: absolute;
-  top: -100px;
-  left: -100px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(0, 183, 255, 0.25), transparent 70%);
-  filter: blur(80px);
-  animation: floatGlow 8s ease-in-out infinite alternate;
-}
-
-@keyframes floatGlow {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(150px, 100px);
-  }
-}
-
-/* 🎨 Fancy Button with gradient animation */
+/* ---------- Button Styling ---------- */
 #color-btn {
-  background: linear-gradient(90deg, #007bff, #00c6ff, #00ffb3);
-  background-size: 300% 100%;
-  color: #fff;
   border: none;
-  border-radius: 14px;
   padding: 14px 28px;
+  border-radius: 12px;
+  background: #00e6b8;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
-  transition: all 0.4s ease;
-  animation: gradientShift 4s ease infinite;
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
+  color: #001f2f;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #color-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
-/* 💡 Animated color code display */
+/* ---------- Color Code Text ---------- */
 #color-code {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 800;
+  margin-top: 25px;
   color: #ffeb3b;
-  margin-top: 30px;
-  letter-spacing: 1.5px;
-  text-shadow: 0 0 15px rgba(255, 235, 59, 0.8);
-  transition: all 0.3s ease;
-  animation: pulseGlow 2s infinite alternate;
 }
 
-@keyframes pulseGlow {
-  from {
-    text-shadow: 0 0 10px rgba(255, 235, 59, 0.6);
-  }
-  to {
-    text-shadow: 0 0 25px rgba(255, 241, 118, 1);
-  }
-}
-
-#color-code:hover {
-  color: #fff176;
-  transform: scale(1.05);
-}
-
-/* 📱 Responsiveness */
+/* ---------- Mobile Responsive ---------- */
 @media (max-width: 600px) {
   #container {
     padding: 30px;
@@ -104,6 +59,6 @@
   }
 
   #color-code {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }

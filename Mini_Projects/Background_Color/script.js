@@ -1,5 +1,5 @@
 const btn = document.getElementById("color-btn");
-const body = document.body;
+const container = document.getElementById("container");
 const codeDisplay = document.getElementById("color-code");
 
 function changeColor() {
@@ -7,10 +7,10 @@ function changeColor() {
   const green = Math.floor(Math.random() * 256);
   const blue = Math.floor(Math.random() * 256);
 
-  document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+  // CHANGE CONTAINER BACKGROUND, NOT BODY
+  container.style.background = `rgb(${red}, ${green}, ${blue})`;
 
-  const code = document.body.style.backgroundColor;
-
-  codeDisplay.innerText = `${code}`;
+  codeDisplay.innerText = `rgb(${red}, ${green}, ${blue})`;
 }
+
 btn.addEventListener("click", changeColor);
