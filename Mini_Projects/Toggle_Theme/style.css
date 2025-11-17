@@ -14,9 +14,6 @@ body.light-mode {
   color: #222;
 }
 
-/* ============================= */
-/* Dark Mode                     */
-/* ============================= */
 body.dark-mode {
   background: linear-gradient(135deg, #141e30, #243b55);
   color: #f5f5f5;
