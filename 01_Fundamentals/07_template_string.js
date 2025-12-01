@@ -1,61 +1,80 @@
 /*
-🧩 TEMPLATE STRINGS IN JAVASCRIPT
----------------------------------
-Template strings (also known as template literals) are enclosed by backticks (`) 
-instead of single (') or double (") quotes.
+✨ TEMPLATE STRINGS (Template Literals) IN JAVASCRIPT
+-----------------------------------------------------
+Template strings are a modern way to work with text in JavaScript.
 
-They make working with strings more powerful and readable.
-
-✅ Features:
-1️⃣ String Interpolation — Embed variables or expressions directly inside a string.
-2️⃣ Multiline Strings — Write strings over multiple lines without using '\n'.
-3️⃣ Expression Evaluation — Perform inline calculations or function calls.
-4️⃣ Cleaner Syntax — No messy concatenation with '+'.
+They use **backticks (`)** instead of single (') or double (") quotes, and provide:
+  ⭐ Cleaner Syntax
+  ⭐ Easier Variable Insertion
+  ⭐ Multiline Text Support
+  ⭐ Inline Expression Evaluation
 */
 
-// Example 1: Basic interpolation
+/* =====================================================
+1️⃣ STRING INTERPOLATION
+---------------------------------------------------------
+Insert variables directly using ${ } — No need for + operator.
+===================================================== */
 let name = "Shourya";
 console.log(`Hello, ${name}!`);
 // Output: Hello, Shourya!
 
-// Example 2: Using expressions inside placeholders
+/* =====================================================
+2️⃣ EXPRESSIONS INSIDE TEMPLATE STRINGS
+---------------------------------------------------------
+You can run calculations, logic, or operations inside ${ }.
+===================================================== */
 let a = 5,
   b = 10;
 console.log(`The sum of ${a} and ${b} is ${a + b}.`);
 // Output: The sum of 5 and 10 is 15.
 
-// Example 3: Multiline strings
+/* =====================================================
+3️⃣ MULTILINE STRINGS
+---------------------------------------------------------
+Template literals allow writing text on multiple lines 
+without using \n.
+===================================================== */
 let msg = `This is line one
 This is line two
 This is line three.`;
-console.log(msg);
-/*
-Output:
-This is line one
-This is line two
-This is line three.
-*/
 
-// Example 4: Using functions inside template literals
+console.log(msg);
+// Output:
+// This is line one
+// This is line two
+// This is line three.
+
+/* =====================================================
+4️⃣ CALLING FUNCTIONS INSIDE TEMPLATE STRINGS
+---------------------------------------------------------
+Functions can be executed inside ${ } to transform values.
+===================================================== */
 function greet(name) {
   return `Hello, ${name.toUpperCase()}!`;
 }
+
 console.log(greet("shourya"));
 // Output: Hello, SHOURYA!
 
-// Example 5: Embedding object properties
+/* =====================================================
+5️⃣ USING OBJECT PROPERTIES
+---------------------------------------------------------
+Insert values from objects directly inside the template.
+===================================================== */
 let user = { firstName: "Shourya", city: "Dehradun" };
+
 console.log(`User ${user.firstName} lives in ${user.city}.`);
 // Output: User Shourya lives in Dehradun.
 
-/*
+/* =====================================================
 💡 WHY USE TEMPLATE STRINGS?
+---------------------------------------------------------
+✔ Cleaner and more readable than traditional strings  
+✔ Supports multiline formatting  
+✔ Allows variables and expressions inline  
+✔ Makes formatting dynamic text extremely easy  
 
-✔ Easier string concatenation — no need for '+'.
-✔ Supports multiline text naturally.
-✔ Allows dynamic value insertion.
-✔ Improves readability and maintainability.
-
-🧠 Remember:
-Always use backticks (`) for template literals.
-*/
+🧠 Reminder:
+Use backticks (`) — NOT single ('') or double ("") quotes.
+===================================================== */
