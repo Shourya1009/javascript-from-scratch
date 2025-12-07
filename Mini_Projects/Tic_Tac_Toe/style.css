@@ -1,8 +1,9 @@
-/* General Reset */
+/* RESET */
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   transition: all 0.25s ease;
+  user-select: none;
 }
 
 body {
@@ -10,95 +11,110 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #74ebd5, #acb6e5);
   margin: 0;
   overflow: hidden;
+  background: linear-gradient(135deg, #6fe7dd, #b1a4ff);
+  background-size: 200% 200%;
+  animation: bgMove 8s ease infinite;
 }
 
-/* Container */
+/* CONTAINER */
 .container {
   text-align: center;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 40px 50px;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.18);
+  padding: 40px 55px;
+  border-radius: 25px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
   animation: fadeIn 0.8s ease-out;
 }
 
-/* Title */
+/* HEADING */
 h1 {
-  color: #222;
-  margin-bottom: 15px;
-  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 2.3rem;
   letter-spacing: 1px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-/* Status Text */
+/* STATUS */
 #status {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 25px;
-  color: #333;
+  color: #f0f0f0;
 }
 
-/* Game Board */
+/* BOARD */
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 110px);
-  grid-template-rows: repeat(3, 110px);
-  gap: 10px;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 12px;
   justify-content: center;
 }
 
-/* Individual Cell */
+/* CELL */
 .cell {
-  background: #fff;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
 }
 
 .cell:hover {
-  background: #f8f8f8;
-  transform: scale(1.08);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
 
+/* When taken */
 .cell.taken {
   cursor: not-allowed;
-  color: #777;
   transform: none;
-  background: #f3f3f3;
+  background: rgba(255, 255, 255, 0.2);
+  color: #777;
+  box-shadow: none;
 }
 
-/* Reset Button */
+/* Special Coloring for X and O */
+.cell.x {
+  color: #ff4f70;
+  text-shadow: 0 2px 8px rgba(255, 80, 120, 0.4);
+}
+
+.cell.o {
+  color: #4fa3ff;
+  text-shadow: 0 2px 8px rgba(80, 140, 255, 0.4);
+}
+
+/* BUTTON */
 #resetBtn {
-  background: linear-gradient(135deg, #333, #555);
+  margin-top: 25px;
+  padding: 13px 32px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #222, #555);
   color: #fff;
   border: none;
-  padding: 12px 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  letter-spacing: 0.5px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 #resetBtn:hover {
-  background: linear-gradient(135deg, #444, #666);
-  transform: scale(1.05);
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #111, #444);
 }
 
-/* Animations */
+/* ANIMATIONS */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -110,19 +126,36 @@ h1 {
   }
 }
 
-/* Responsive */
+@keyframes bgMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* RESPONSIVE */
 @media (max-width: 500px) {
+  .container {
+    padding: 30px 35px;
+  }
+
   .board {
     grid-template-columns: repeat(3, 90px);
     grid-template-rows: repeat(3, 90px);
-    gap: 8px;
+    gap: 10px;
   }
 
   .cell {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    border-radius: 15px;
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
