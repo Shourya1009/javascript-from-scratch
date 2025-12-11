@@ -1,8 +1,10 @@
 /*
-🎯 CONDITIONALS IN JAVASCRIPT
-----------------------------
-Conditionals allow programs to make decisions.
-They help decide *what happens next* based on TRUE or FALSE.
+=========================================================
+🚦 CONDITIONALS IN JAVASCRIPT — CLEAN & IMPROVED VERSION
+---------------------------------------------------------
+Conditionals allow programs to *make decisions*.
+They run different code based on TRUE or FALSE.
+=========================================================
 */
 
 console.clear();
@@ -11,7 +13,7 @@ console.log("========= 🚦 CONDITIONALS IN JAVASCRIPT =========\n");
 /* ======================================================
 1️⃣ IF STATEMENT
 ---------------------------------------------------------
-Runs the code block only when the condition is TRUE.
+✓ Runs code only when condition is TRUE.
 ====================================================== */
 let age = 18;
 
@@ -27,7 +29,7 @@ console.log("--------------------------------------------------\n");
 /* ======================================================
 2️⃣ IF...ELSE STATEMENT
 ---------------------------------------------------------
-Provides an alternative outcome when the condition is FALSE.
+✓ Provides alternative output when condition is FALSE.
 ====================================================== */
 let age_1 = 16;
 
@@ -45,7 +47,8 @@ console.log("--------------------------------------------------\n");
 /* ======================================================
 3️⃣ IF...ELSE IF...ELSE CHAIN
 ---------------------------------------------------------
-Used to check multiple conditions in order.
+✓ Multiple conditions checked in order.
+✓ First TRUE condition executes.
 ====================================================== */
 let score = 75;
 
@@ -67,7 +70,8 @@ console.log("--------------------------------------------------\n");
 /* ======================================================
 4️⃣ NESTED IF STATEMENT
 ---------------------------------------------------------
-An 'if' inside another 'if', used for layered checks.
+✓ An IF inside another IF.
+✓ Useful for layered decision-making.
 ====================================================== */
 let isLoggedIn = true;
 let isAdmin = false;
@@ -91,7 +95,8 @@ console.log("--------------------------------------------------\n");
 /* ======================================================
 5️⃣ SWITCH STATEMENT
 ---------------------------------------------------------
-Useful for checking a value against multiple fixed options.
+✓ Cleaner alternative to multiple IF...ELSE IF…
+✓ Best for fixed, known values.
 ====================================================== */
 let day = 3;
 
@@ -121,7 +126,7 @@ switch (day) {
     console.log("📅 Sunday");
     break;
   default:
-    console.log("⚠️ Invalid day! Enter a number 1–7.");
+    console.log("⚠️ Invalid day! Enter 1–7.");
 }
 
 console.log("--------------------------------------------------\n");
@@ -129,7 +134,8 @@ console.log("--------------------------------------------------\n");
 /* ======================================================
 6️⃣ TERNARY OPERATOR (? :)
 ---------------------------------------------------------
-A shorthand one-line replacement for IF...ELSE.
+✓ Shortest form of IF...ELSE.
+✓ Perfect for small decisions.
 ====================================================== */
 let age_2 = 20;
 
@@ -144,7 +150,8 @@ console.log("--------------------------------------------------\n");
 /* ======================================================
 🧠 BONUS: Real-World Example  
 ---------------------------------------------------------
-Simulating an online purchase decision.
+Buying an item online.
+Shows nested logic and multi-condition thinking.
 ====================================================== */
 let hasAccount = true;
 let balance = 450;
@@ -165,14 +172,12 @@ if (hasAccount) {
 console.log("--------------------------------------------------\n");
 
 /* ======================================================
-✨ SUMMARY
+✨ SUMMARY — WHEN TO USE WHAT?
 ---------------------------------------------------------
-✔ if — one condition  
-✔ if...else — two outcomes  
-✔ if...else if...else — multiple outcomes  
-✔ nested if — layered logic  
-✔ switch — clean handling of multiple fixed cases  
-✔ ternary — short inline condition
+✔ IF → single condition  
+✔ IF...ELSE → two outcomes  
+✔ IF...ELSE IF → multiple conditions  
+✔ Nested IF → layered checks  
+✔ Switch → cleaner multiple fixed cases  
+✔ Ternary → short & simple decisions  
 ====================================================== */
-
-console.log("========= ✅ END OF CONDITIONALS DEMO =========");
