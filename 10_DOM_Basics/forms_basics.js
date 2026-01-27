@@ -1,0 +1,52 @@
+// ==================================
+// FORMS BASICS IN DOM (JavaScript)
+// ==================================
+
+// This file covers:
+// - Form submit event
+// - Reading input values
+// - preventDefault()
+// - Basic validation
+
+// NOTE: Run this in browser with an HTML file.
+
+// ----------------------------------
+// Selecting form and elements
+const form = document.getElementById("userForm");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const message = document.getElementById("message");
+
+// ----------------------------------
+// Form submit event
+if (form) {
+  form.addEventListener("submit", (event) => {
+    // Prevent page refresh
+    event.preventDefault();
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+
+    // ----------------------------------
+    // Basic validation
+    if (name === "" || email === "") {
+      message.textContent = "❌ Please fill in all fields.";
+      message.style.color = "red";
+      return;
+    }
+
+    if (!email.includes("@")) {
+      message.textContent = "❌ Please enter a valid email.";
+      message.style.color = "red";
+      return;
+    }
+
+    // ----------------------------------
+    // Success message
+    message.textContent = `✅ Form submitted! Welcome, ${name}`;
+    message.style.color = "green";
+
+    // Reset form
+    form.reset();
+  });
+}
