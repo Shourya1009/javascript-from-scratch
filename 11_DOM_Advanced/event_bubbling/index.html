@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Bubbling</title>
+    <style>
+        #grandParent {
+            padding: 30px;
+            background: lightcoral;
+        }
+
+        #parent {
+            padding: 30px;
+            background: lightblue;
+        }
+
+        #child {
+            padding: 30px;
+            background: lightgreen;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Click the inner box</h2>
+
+    <div id="grandParent">
+        Grand Parent
+        <div id="parent">
+            Parent
+            <div id="child">Child</div>
+        </div>
+    </div>
+
+    <script src="event_bubbling.js"></script>
+</body>
+
+</html>
