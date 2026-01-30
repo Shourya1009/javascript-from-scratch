@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Event Capturing</title>
+    <style>
+        #container {
+            padding: 30px;
+            border: 2px solid black;
+        }
+
+        #parent {
+            padding: 30px;
+            border: 2px solid blue;
+        }
+
+        #child {
+            padding: 30px;
+            border: 2px solid red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Click the red box (Capturing Phase)</h2>
+
+    <div id="container">
+        Container
+        <div id="parent">
+            Parent
+            <div id="child">Child</div>
+        </div>
+    </div>
+
+    <!-- ONLY THIS SCRIPT ENABLED -->
+    <script src="event_capturing.js"></script>
+</body>
+
+</html>
