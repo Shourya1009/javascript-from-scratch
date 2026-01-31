@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Stop Propagation</title>
+    <style>
+        #container {
+            padding: 30px;
+            border: 2px solid black;
+        }
+
+        #parent {
+            padding: 30px;
+            border: 2px solid blue;
+        }
+
+        #child {
+            padding: 30px;
+            border: 2px solid red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Click the red box</h2>
+
+    <div id="container">
+        Container
+        <div id="parent">
+            Parent
+            <div id="child">Child</div>
+        </div>
+    </div>
+
+    <script src="stop_propagation.js"></script>
+</body>
+
+</html>
