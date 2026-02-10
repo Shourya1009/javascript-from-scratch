@@ -1,8 +1,8 @@
 # 🚀 JavaScript From Scratch
 
-A **beginner-friendly JavaScript learning repository** focused on building a **strong foundation from zero** using clear explanations, practical examples, and mini projects.
+A **beginner-friendly JavaScript learning repository** focused on building a **strong foundation from zero** using clear explanations, practical examples, and hands-on mini projects.
 
-This repository is designed to help you understand **JavaScript fundamentals step by step** through hands-on practice before moving to advanced concepts or frameworks like **React**.
+This repository is designed to help you understand **JavaScript step by step**, strengthen your fundamentals, and become confident before moving to frameworks like **React** or **Next.js**.
 
 ---
 
@@ -12,49 +12,120 @@ This repository is ideal for:
 
 - 🚀 Beginners starting JavaScript from scratch
 - 🔁 Revising core JavaScript fundamentals
-- 🧠 Improving logical thinking and problem-solving
+- 🧠 Improving logic building & problem-solving skills
 - 🧩 Learning JavaScript through practical examples
-- ⚛️ Preparing for frameworks like React, Next.js, etc.
+- ⚛️ Preparing for React, Next.js, and modern frontend development
+
+Each concept is broken down into **small, focused files** with clean and readable code.
 
 ---
 
 ## 📁 Folder Structure
 
-The repository is organized **topic-wise** for easy navigation:
+The repository is organized **topic-wise** for easy navigation and structured learning.
 
-### 🔹 Fundamentals
+### 🔹 01_Fundamentals
 
 - Variables
 - Data types
 - Basic syntax
 - Console methods
 
-### 🔹 Operators
+### 🔹 02_Operators
 
 - Arithmetic operators
 - Logical operators
 - Comparison operators
 - Assignment operators
 
-### 🔹 Conditionals
+### 🔹 03_Conditionals
 
 - `if`, `else`, `else if`
 - `switch` statement
 - Ternary operator
 
-### 🔹 Mini Projects
+### 🔹 04_Loops
 
-- Small hands-on projects
+- `for`, `while`, `do…while`
+- `for...of`, `for...in`
+- `break` & `continue`
+
+### 🔹 05_Functions
+
+- Function declarations
+- Function expressions
+- Arrow functions
+- Parameters vs arguments
+- Default parameters
+- `return` keyword
+
+### 🔹 06_Arrays
+
+- Array basics
+- Array methods
+- `map`, `filter`, `reduce`
+- Sorting & slicing
+
+### 🔹 07_Objects_Advanced
+
+- Object basics & methods
+- `this` keyword
+- Destructuring
+- Spread & rest operators
+- Optional chaining
+
+### 🔹 08_Scope_Closures
+
+- Global, function & block scope
+- Lexical scope
+- Closures
+- Variable shadowing
+
+### 🔹 09_Async_JavaScript
+
+- Callbacks
+- Promises
+- `async / await`
+- Fetch API
+- Error handling (`try`, `catch`, `finally`)
+
+### 🔹 10_DOM_Basics
+
+- DOM selectors
+- DOM traversing
+- Creating & updating elements
+- Events basics
+- Form handling & validation
+
+### 🔹 11_DOM_Advanced
+
+- Event bubbling
+- Event capturing
+- Event delegation
+- `stopPropagation()`
+- `preventDefault()`
+
+### 🔹 12_ES6_Features
+
+- `var` vs `let` vs `const`
+- Template literals
+- Default parameters
+- Arrow function review
+- Destructuring & spread/rest review
+- Modules (`import` / `export`)
+- Classes & inheritance
+
+### 🔹 Mini_Projects
+
+- Small hands-on JavaScript projects
 - Real-world logic implementation
-- Practice-focused JavaScript applications
-
-Each folder contains **simple, well-commented code examples** to make learning easier and more intuitive.
+- DOM & event-based applications
 
 ---
 
-## 🚀 How to Use This Repository
+## 🛠️ How to Use This Repository
 
-### 1️⃣ Clone the Repository
+### 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/Shourya1009/javascript-from-scratch.git
