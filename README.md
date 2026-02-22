@@ -1,8 +1,8 @@
 # 🚀 JavaScript From Scratch
 
-A **beginner-friendly JavaScript learning repository** focused on building a **strong foundation from zero** using clear explanations, practical examples, and hands-on mini projects.
+A **beginner-friendly JavaScript learning repository** focused on building a **strong foundation from zero** using clear explanations, structured examples, and hands-on mini projects.
 
-This repository is designed to help you understand **JavaScript step by step**, strengthen your fundamentals, and become confident before moving to frameworks like **React** or **Next.js**.
+This repository is designed to help you learn **JavaScript step by step**, strengthen core concepts, and become confident before moving to frameworks like **React**, **Next.js**, or other frontend technologies.
 
 ---
 
@@ -12,17 +12,17 @@ This repository is ideal for:
 
 - 🚀 Beginners starting JavaScript from scratch
 - 🔁 Revising core JavaScript fundamentals
-- 🧠 Improving logic building & problem-solving skills
+- 🧠 Improving logical thinking & problem-solving skills
 - 🧩 Learning JavaScript through practical examples
 - ⚛️ Preparing for React, Next.js, and modern frontend development
 
-Each concept is broken down into **small, focused files** with clean and readable code.
+Each concept is organized into **small, focused files** with clean and readable code to make learning simple and structured.
 
 ---
 
 ## 📁 Folder Structure
 
-The repository is organized **topic-wise** for easy navigation and structured learning.
+The repository is organized **topic-wise** for easy navigation and progressive learning.
 
 ### 🔹 01_Fundamentals
 
@@ -94,7 +94,7 @@ The repository is organized **topic-wise** for easy navigation and structured le
 - DOM selectors
 - DOM traversing
 - Creating & updating elements
-- Events basics
+- Event handling basics
 - Form handling & validation
 
 ### 🔹 11_DOM_Advanced
