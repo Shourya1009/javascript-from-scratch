@@ -1,89 +1,172 @@
-/* ✨ Premium Timer App – Modern Refined UI */
+/* ✨ Fixed Responsive Premium Timer UI */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  background: linear-gradient(135deg, #0c1b23, #1e3a47, #2a505f);
-  font-family: "Poppins", sans-serif;
-  color: #fff;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(160deg, #0f172a, #111827, #1e293b);
+  color: white;
   overflow: hidden;
+  padding: 20px;
 }
 
-/* Frosted Glass Card */
+/* Background Glow */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.16;
+  z-index: 0;
+}
+
+body::before {
+  width: 260px;
+  height: 260px;
+  background: #00c6ff;
+  top: 10%;
+  left: 10%;
+}
+
+body::after {
+  width: 240px;
+  height: 240px;
+  background: #2563eb;
+  bottom: 10%;
+  right: 10%;
+}
+
+/* Main Container */
 #container {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.12);
-  padding: 50px 70px;
+  position: relative;
+  z-index: 2;
+  width: min(100%, 360px); /* Prevents overflow */
+  padding: clamp(24px, 5vw, 38px);
   border-radius: 24px;
-  backdrop-filter: blur(14px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
 
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35),
-    0 0 60px rgba(255, 255, 255, 0.05) inset;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
 
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
-#container:hover {
-  transform: translateY(-8px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45),
-    0 0 70px rgba(0, 200, 255, 0.08) inset;
+/* Heading */
+h1 {
+  font-size: clamp(0.72rem, 2vw, 0.85rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 14px;
+  font-weight: 500;
 }
 
 /* Timer Display */
 #timer-display {
-  font-size: 3.6rem;
-  letter-spacing: 3px;
-  font-weight: 600;
-  margin: 25px 0;
-  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  font-size: clamp(2.6rem, 10vw, 4.2rem);
+  font-weight: 700;
+  letter-spacing: clamp(1px, 0.5vw, 3px);
+  line-height: 1.1;
+  margin-bottom: 26px;
+
+  background: linear-gradient(180deg, #ffffff, #c9f7ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  word-break: break-word; /* Prevents overflow */
 }
 
-/* Modern Animated Buttons */
+/* Buttons Wrapper */
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Prevents break */
+  gap: 10px;
+  width: 100%;
+}
+
+/* Buttons */
 button {
-  background: linear-gradient(135deg, #008cff, #00e0ff);
+  flex: 1 1 90px; /* Flexible buttons */
+  max-width: 110px;
+  min-width: 80px;
+
   border: none;
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 12px;
-  margin: 12px 10px;
-  font-size: 1rem;
   cursor: pointer;
-  letter-spacing: 0.5px;
+  padding: 11px 14px;
+  border-radius: 12px;
 
-  box-shadow: 0 6px 18px rgba(0, 180, 255, 0.35);
-  transition: transform 0.25s ease, box-shadow 0.3s ease, background 0.3s ease;
+  font-size: clamp(0.75rem, 2vw, 0.85rem);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  transition: all 0.22s ease;
+  white-space: nowrap;
 }
 
+/* Start */
+button.start {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  box-shadow: 0 8px 18px rgba(0, 114, 255, 0.25);
+}
+
+/* Pause */
+button.pause {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Reset */
+button.reset {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ff7b93;
+  border: 1px solid rgba(255, 123, 147, 0.14);
+}
+
+/* Hover */
 button:hover {
-  transform: scale(1.07) translateY(-2px);
-  box-shadow: 0 10px 22px rgba(0, 200, 255, 0.45);
-  background: linear-gradient(135deg, #00d0ff, #008cff);
+  transform: translateY(-2px);
 }
 
+/* Active */
 button:active {
-  transform: scale(0.96);
+  transform: scale(0.97);
 }
 
-/* Small Screen Improvements */
-@media (max-width: 600px) {
+/* Mobile */
+@media (max-width: 480px) {
   #container {
-    padding: 32px 38px;
-    border-radius: 18px;
+    border-radius: 20px;
+    padding: 22px 16px;
   }
 
-  #timer-display {
-    font-size: 2.6rem;
-    letter-spacing: 2px;
+  .buttons {
+    flex-direction: column;
+    align-items: center;
   }
 
   button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    margin: 8px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #timer-display {
+    margin-bottom: 22px;
   }
 }
