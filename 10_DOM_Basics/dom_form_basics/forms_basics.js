@@ -7,6 +7,8 @@
 // - Reading input values
 // - preventDefault()
 // - Basic validation
+// - Better email check
+// - Cleaner UI updates
 
 // NOTE: Run this in browser with an HTML file.
 
@@ -18,35 +20,53 @@ const emailInput = document.getElementById("email");
 const message = document.getElementById("message");
 
 // ----------------------------------
+// Function to display messages
+function showMessage(text, color) {
+  message.textContent = text;
+  message.style.color = color;
+}
+
+// ----------------------------------
 // Form submit event
 if (form) {
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", function (event) {
     // Prevent page refresh
     event.preventDefault();
 
+    // Get trimmed values
     const name = nameInput.value.trim();
     const email = emailInput.value.trim();
 
     // ----------------------------------
     // Basic validation
-    if (name === "" || email === "") {
-      message.textContent = "❌ Please fill in all fields.";
-      message.style.color = "red";
+    if (!name || !email) {
+      showMessage("❌ Please fill in all fields.", "red");
       return;
     }
 
-    if (!email.includes("@")) {
-      message.textContent = "❌ Please enter a valid email.";
-      message.style.color = "red";
+    // Email validation using regex
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (!emailPattern.test(email)) {
+      showMessage("❌ Please enter a valid email address.", "red");
       return;
     }
 
     // ----------------------------------
     // Success message
-    message.textContent = `✅ Form submitted! Welcome, ${name}`;
-    message.style.color = "green";
+    showMessage(`✅ Form submitted successfully! Welcome, ${name}`, "green");
 
-    // Reset form
+    // Reset form after successful submission
     form.reset();
+  });
+
+  // ----------------------------------
+  // Optional: Clear message when user starts typing
+  nameInput.addEventListener("input", () => {
+    message.textContent = "";
+  });
+
+  emailInput.addEventListener("input", () => {
+    message.textContent = "";
   });
 }
